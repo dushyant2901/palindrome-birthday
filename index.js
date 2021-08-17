@@ -11,3 +11,9 @@ function reverseString(str){
    return reversedString 
   // return str.split("").reverse().join("")
  } 
+
+ function isPalindrome(str){
+    let reverseStr=reverseString(str);
+    return str===reverseStr
+ 
+ }
