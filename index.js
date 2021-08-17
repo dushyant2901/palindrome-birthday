@@ -173,3 +173,22 @@ function clickHandler(){
     
     }
      }
+
+
+     function getPreviousPalindrome(date){
+        ctr1=0
+        let previousDate=previousDay(date);
+     
+        while(1){
+            let isPalindrome=checkPalindromeForAllDateFormat(previousDate)
+            ctr1++;
+            if(isPalindrome){
+     
+                break
+            }
+            previousDate=previousDay(previousDate);
+            
+           }
+           return [ctr1,previousDate]
+     } 
+     
