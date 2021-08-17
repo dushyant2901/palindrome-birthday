@@ -125,3 +125,20 @@ function checkPalindromeForAllDateFormat(date){
     }
  
  }
+
+ function getNextPalindrome(date){
+    ctr=0
+    let nextDate=nextDay(date);
+
+    while(1){
+        let isPalindrome=checkPalindrome(nextDate)
+        if(isPalindrome){
+
+            break
+        }
+        ctr++;
+        nextDate=nextDay(nextDate);
+        
+       }
+       return [ctr,nextDate]
+}
