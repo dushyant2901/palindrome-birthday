@@ -142,3 +142,34 @@ function checkPalindromeForAllDateFormat(date){
        }
        return [ctr,nextDate]
 }
+
+function clickHandler(){
+    let bdaystr=dateInputRef.value;
+    //console.log(bdayDate)
+    if(bdaystr!==""){
+    let listOfBdayStr=bdaystr.split("-")
+    let date={
+       day:Number( listOfBdayStr[2]),
+       month:Number( listOfBdayStr[1]),
+       year:Number( listOfBdayStr[0])
+    
+    }
+    
+    let isPalindrome =checkPalindromeForAllDateFormat(date)
+    
+    if(isPalindrome){
+       //console.log("yay")
+       resultRef.innerText="Congrats!! Your Birthday Is Palindrome."
+    }
+    else{
+       console.log("nope")
+        let [ctr,nextDate]= getNextPalindrome(date);
+      resultRef.innerText=`The Next Palindrome Date Is ${nextDate.day}-${nextDate.month}-${nextDate.year} and you missed it by ${ctr} days`
+      console.log(nextDate,ctr)  
+      
+      
+      
+    }
+    
+    }
+     }
