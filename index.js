@@ -79,3 +79,49 @@ function checkPalindromeForAllDateFormat(date){
     return true
  }return false
  }
+ function nextDay(date){
+    
+    let day=date.day;
+    let month=date.month;
+    let year=date.year;
+    day=day+1
+ 
+    let daysInMonth=[31,28,31,30,31,30,31,31,30,31,30,31]
+ 
+    if(month===2){
+       if(isLeapYear(year)){
+          console.log("leap")
+          if(day>29){
+             day=1;
+             month++
+            // console.log("leap")
+          }
+       }else{
+          console.log("not-leap")
+          if(day>28){
+             day=1;
+             month++;
+            // console.log("not-leap")
+          }
+       }
+    }
+    else{
+       if(day>daysInMonth[month-1]){
+          day=1;
+          month++;
+       }
+    }
+ 
+    if(month>12){
+       month=1;
+       year++
+    }
+ 
+ 
+    return {
+       day:day,
+       month:month,
+       year:year
+    }
+ 
+ }
