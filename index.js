@@ -131,7 +131,7 @@ function checkPalindromeForAllDateFormat(date){
     let nextDate=nextDay(date);
 
     while(1){
-        let isPalindrome=checkPalindrome(nextDate)
+        let isPalindrome=checkPalindromeForAllDateFormat(nextDate)
         if(isPalindrome){
 
             break
