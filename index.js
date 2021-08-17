@@ -191,4 +191,8 @@ function clickHandler(){
            }
            return [ctr1,previousDate]
      } 
+
      
+     let [ctr1,previousDate]= getPreviousPalindrome(date);
+resultRef.innerText=`The Previous Palindrome Date Is ${previousDate.day}-${previousDate.month}-${previousDate.year} and you missed it by ${ctr1} days`
+ 
