@@ -40,3 +40,16 @@ function reverseString(str){
    return dateStr  
   
   }
+
+  function getAllDateFormat(date){
+    let dateStr=convertDateToString(date)
+
+    let ddmmyyyy=dateStr.day+dateStr.month+dateStr.year;
+    let mmddyyyy=dateStr.month+dateStr.day+dateStr.year;
+    let yyyymmdd=dateStr.year+dateStr.month+dateStr.day;
+    let ddmmyy=dateStr.day+dateStr.month+dateStr.year.slice(-2);
+    let mmddyy=dateStr.month+dateStr.day+dateStr.year.slice(-2);
+    let yymmdd=dateStr.year.slice(-2)+dateStr.month+dateStr.day;
+
+    return [ddmmyyyy,mmddyyyy,yyyymmdd,ddmmyy,mmddyy,yymmdd]
+}
