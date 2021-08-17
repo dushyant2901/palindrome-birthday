@@ -53,3 +53,16 @@ function reverseString(str){
 
     return [ddmmyyyy,mmddyyyy,yyyymmdd,ddmmyy,mmddyy,yymmdd]
 }
+
+function checkPalindromeForAllDateFormat(date){
+    let palindromeList=getAllDateFormat(date);
+ 
+    let flag=false;
+    for(let i=0;i<palindromeList.length;i++){
+    if(isPalindrome(palindromeList[i])){
+        flag=true;
+        break;
+    }
+    }
+    return flag
+ }
