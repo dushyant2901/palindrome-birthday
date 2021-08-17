@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+font-size: 1.5rem;
+margin-bottom: 1rem;
+text-align: center;
+}
+.bday-container{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+  
+}
+#bday-input{
+    font-size: 1.25rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    
+}
+
+
+
+#show-btn{
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+#show-btn:hover{
+    cursor: pointer;
+}
+#result{
+    text-align: center;
+}
