@@ -6,10 +6,27 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-color: antiquewhite;
+    background-color: rgb(245, 238, 229);
+    font-family: 'Courier New', Courier, monospace;
+}
+.wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    height: 85vh;
+
+}
+.child-wrapper{
+    border: 3px solid rgb(243, 195, 132);
+background-color: antiquewhite;
+color:rgb(241, 151, 32) ;
+padding: 1rem;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50vh;
+flex-direction: column;
 }
 .heading{
 font-size: 1.5rem;
@@ -24,15 +41,19 @@ text-align: center;
     align-items: center;
     flex-direction: column;
     margin: auto;
-  
+    
 }
 #bday-input{
+    color:rgb(241, 151, 32)  ;
     font-size: 1.25rem;
     padding: 1rem;
     margin: 1rem;
     border-radius: 0.5rem;
-    
+    background-color:  rgb(245, 238, 229);
+    border-color: rgb(241, 151, 32);
+    outline: none;
 }
+
 
 
 
@@ -41,12 +62,49 @@ text-align: center;
     padding: 0.5rem;
     margin: 1rem;
     border-radius: 0.5rem;
-    border: none;
+    border: 2px solid  rgb(241, 151, 32);;
     transition: all 0.3s ease;
+    color: rgb(241, 151, 32);
+   
+    
 }
 #show-btn:hover{
     cursor: pointer;
+    background-color: rgb(241, 151, 32);
+    color: antiquewhite;
 }
 #result{
     text-align: center;
+    color: rgb(241, 151, 32);
+    font-weight: 600;
 }
+
+.footer{
+    background-color: var(--primary-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top-right-radius: 1rem;
+    height: 15vh;
+    color: var(--primary-green);
+}
+.footer-heading{font-weight: bold;
+    font-size: large;
+    color: rgb(241, 151, 32);
+  }
+  .footer .link{
+    color: rgb(241, 151, 32);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .footer ul{
+    padding-inline-start: 0px;
+    list-style: none;
+  }
+  .footer .list-unbulleted-list{display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  gap: 1.5rem;
+  }
+
+
