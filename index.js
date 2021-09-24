@@ -2,6 +2,16 @@ const dateInputRef=document.querySelector("#bday-input");
 const showBtnRef=document.querySelector("#show-btn");
 const resultRef=document.querySelector("#result");
 
+const waitDiv = document.querySelector("#waiting");
+const howManyDays = document.querySelector("#span-days");
+const next = document.querySelector("#span-date");
+
+const yesImg = document.querySelector("#img-yay");
+const yesDiv = document.querySelector("#div-yay");
+
+const noImg = document.querySelector("#img-nah");
+const noDiv = document.querySelector("#div-nah");
+
 showBtnRef.addEventListener("click",clickHandler);
 
 function reverseString(str){
@@ -142,6 +152,12 @@ function checkPalindromeForAllDateFormat(date){
        }
        return [ctr,nextDate]
 }
+function setDisplay(refs, val) {
+
+   refs.forEach(ref => {
+       ref.style.display = val;
+   });
+}
 
 function clickHandler(){
     let bdaystr=dateInputRef.value;
@@ -157,19 +173,36 @@ function clickHandler(){
     
     let isPalindrome =checkPalindromeForAllDateFormat(date)
     
-    if(isPalindrome){
-       //console.log("yay")
-       resultRef.innerText="Congrats!! Your Birthday Is Palindrome."
-    }
-    else{
-       console.log("nope")
-        let [ctr,nextDate]= getNextPalindrome(date);
-      resultRef.innerText=`The Next Palindrome Date Is ${nextDate.day}-${nextDate.month}-${nextDate.year} and you missed it by ${ctr} days`
-      console.log(nextDate,ctr)  
+
+
+    setDisplay([resultRef, noDiv, noImg, yesDiv, yesImg], "none");
+    setDisplay([waitDiv], "flex");
+
+    setTimeout(function () {
+        setDisplay([waitDiv], "none");
+       
+        if(isPalindrome){
+         //console.log("yay")
+         setDisplay([resultRef, noDiv, noImg], "none");
+         setDisplay([resultRef, yesDiv, yesImg], "flex");
+       //  resultRef.innerText="Congrats!! Your Birthday Is Palindrome."
+      }
+      else{
+         console.log("nope")
+         setDisplay([resultRef, yesDiv, yesImg], "none");
+          let [ctr,nextDate]= getNextPalindrome(date);
+        howManyDays.innerText=` ${ctr} `
+        next.innerText=`  ${nextDate.day}-${nextDate.month}-${nextDate.year} `
+        console.log(nextDate,ctr)  
+        setDisplay([resultRef,  noImg], "flex");
+        setDisplay( [noDiv], "block");
+        
+        
+      }
       
-      
-      
-    }
+    }, 4000);
+
+
     
     }
      }
