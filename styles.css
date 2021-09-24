@@ -25,7 +25,7 @@ padding: 1rem;
 display: flex;
 justify-content: center;
 align-items: center;
-height: 50vh;
+min-height: 60vh;
 flex-direction: column;
 }
 .heading{
@@ -35,12 +35,13 @@ text-align: center;
 }
 .bday-container{
     width: 80%;
-    height: 50%;
+  
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: auto;
+   
     
 }
 #bday-input{
@@ -74,11 +75,23 @@ text-align: center;
     color: antiquewhite;
 }
 #result{
-    text-align: center;
-    color: rgb(241, 151, 32);
+   
+    color: rgb(230, 154, 63);
     font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
+
+ #img-yay,#div-yay,
+#img-nah,#div-nah{display: none;} 
+
+#div-yay,#div-nah{max-width: 40vw;margin-top: 2rem;}
+.wait{display: none;align-items: center;justify-content: center;flex-direction: column;}
+.wait img{height: 100px;}
 .footer{
     background-color: var(--primary-color);
     padding: 2rem 1rem;
