@@ -15,11 +15,11 @@ const noDiv = document.querySelector("#div-nah");
 showBtnRef.addEventListener("click",clickHandler);
 
 function reverseString(str){
-    let listOfChar=str.split("");
-   let reverseListOfChar=listOfChar.reverse();
-   let reversedString=reverseListOfChar.join("");
-   return reversedString 
-  // return str.split("").reverse().join("")
+   //  let listOfChar=str.split("");
+   // let reverseListOfChar=listOfChar.reverse();
+   // let reversedString=reverseListOfChar.join("");
+   // return reversedString 
+  return str.split("").reverse().join("")
  } 
 
  function isPalindrome(str){
